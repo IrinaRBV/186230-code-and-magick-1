@@ -16,13 +16,13 @@ setupOpenIcon.setAttribute('tabindex', '1');
 
 setupSubmit.setAttribute('tabindex', '3');
 
-/*Когда иконка пользователя в фокусе, 
+/* Когда иконка пользователя в фокусе,
 то диалог настройки должен открываться по нажатию кнопки ENTER*/
 var ENTER_KEY_CODE = 13;
 var ESCAPE_KEY_CODE = 27;
 
-/*принимает на вход событие и возвращает true в том случае, 
-если у этого события есть параметр keyCode и этот парамент равен ENTER_KEY_CODE */
+/* принимает на вход событие и возвращает true в том случае,
+если у этого события есть параметр keyCode и этот парамент равен ENTER_KEY_CODE*/
 var isActivateEvent = function (event) {
   return event.keyCode && event.keyCode === ENTER_KEY_CODE;
 };
@@ -55,7 +55,7 @@ var setupOpenButton = function () {
 
 var setupOpenKey = function (event) {
   // если произошло событие активации, то показать загрузку елемента
-  if (isActivateEvent (event)) {
+  if (isActivateEvent(event)) {
     showSetupElement();
   }
 };
@@ -67,7 +67,7 @@ var setupCloseButton = function () {
 
 var setupCloseKey = function (event) {
   // если произошло событие активации, то скрыть загрузку елемента
-  if (isActivateEvent (event)) {
+  if (isActivateEvent(event)) {
     hideSetupElement();
   }
 };
